@@ -1,0 +1,13 @@
+Source: udmabuf
+Section: kmod
+Priority: optional
+Maintainer: ikwzm <ichiro_k@ca2.so-net.ne.jp>
+Build-Depends: debhelper (>= 9), bzip2
+Standards-Version: 3.9.6
+Homepage: <https://github.com/ikwzm/udmabuf>
+
+Package: udmabuf-${KERNEL_RELEASE}
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, linux-image-${KERNEL_RELEASE}
+Description: User space mappable DMA Buffer.
+
