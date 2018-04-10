@@ -14,52 +14,45 @@ For details of udmabuf, please refer to following URL.
 
   * https://github.com/ikwzm/udmabuf
 
-Build and Install in self
+Build Debian Package
 ------------------------------------------------------------------------------------
 
 ### Download repository
 
 ```console
-shell$ git clone git://github.com/ikwzm/udmabuf-debpkg
+shell$ git clone --recursive --depth=1 -b v1.1.0 git://github.com/ikwzm/udmabuf-debpkg
 shell$ cd udmabuf-debpkg
 ```
 
-### Checkout v1.1.0
+### Cross Compile
 
-```console
-shell$ git checkout v1.1.0
-shell$ git submodule init
-shell$ git submodule update
-```
+#### Parameters
 
-### Build
+| Parameter Name | Description              | Default Value                                                    |
+|----------------|--------------------------|------------------------------------------------------------------|
+| kernel_release | Kernel Release Name      | $(shell uname -r)                                                |
+| arch           | Architecture Name        | $(shell uname -m \| sed -e s/arm.\*/arm/ -e s/aarch64.\*/arm64/) |
+| deb_arch       | Debian Architecture Name | $(shell dpkg --print-architecture)                               |
+| kernel_src_dir | Kernel Source Directory  | /lib/modules/$(kernel_release)/build                             |
 
-```console
-shell$ make
-
-```
-
-
-# Build Debian Package
-
-## Parameters
-
-  * kernel_release : Kernel Release Name     , default=$(shell uname -r)
-  * arch           : Architecture Name       , default=$(shell uname -m | sed -e s/arm.*/arm/ -e s/aarch64.*/arm64/)
-  * deb_arch       : Debian Architecture Name, default=$(shell dpkg --print-architecture)
-  * kernel_src_dir : Kernel Source Directory , default=/lib/modules/$(kernel_release)/build
-
-## Cross Compile for armv7
 
 ```console
 shell$ sudo debian/rules arch=arm deb_arch=armhf kernel_release=4.14.21-armv7-fpga kernel_src_dir=/usr/src/linux-4.14.21-armv7-fpga binary
+    :
+    :
+    :
 shell$ file ../udmabuf-4.14.21-armv7-fpga_1.1.0-1_armhf.deb
 ../udmabuf-4.14.21-armv7-fpga_1.1.0-1_armhf.deb: Debian binary package (format 2.0)
 ```
 
-## Self Compile
+### Self Compile
 
 ```console
 shell$ sudo debian/rules binary
+    :
+    :
+    :
+shell$ file ../udmabuf-4.14.21-armv7-fpga_1.1.0-1_armhf.deb
+../udmabuf-4.14.21-armv7-fpga_1.1.0-1_armhf.deb: Debian binary package (format 2.0)
 ```
 
