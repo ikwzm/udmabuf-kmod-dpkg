@@ -8,6 +8,7 @@ Homepage: <https://github.com/ikwzm/udmabuf>
 
 Package: udmabuf-${KERNEL_RELEASE}
 Architecture: any
+Provides: udmabuf-kernel-module
 Depends: ${shlibs:Depends}, ${misc:Depends}, linux-image-${KERNEL_RELEASE}
 Description: User space mappable DMA Buffer.
 
