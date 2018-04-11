@@ -1,12 +1,12 @@
-udmabuf(User space mappable DMA Buffer) debian package
-======================================================
+udmabuf kernel module debian package
+====================================================================================
 
 Overview
 ------------------------------------------------------------------------------------
 
 ### Introduction
 
-This is a repository for making udmabuf debian package.
+This is a repository for making udmabuf kernel module debian package.
 
 Udmabuf is a Linux device driver that allocates contiguous memory blocks in the kernel space as DMA buffers and makes them available from the user space.
 
@@ -20,8 +20,8 @@ Build Debian Package
 ### Download repository
 
 ```console
-shell$ git clone --recursive --depth=1 -b v1.1.0 git://github.com/ikwzm/udmabuf-debpkg
-shell$ cd udmabuf-debpkg
+shell$ git clone --recursive --depth=1 -b v1.1.0 git://github.com/ikwzm/udmabuf-kmod-dpkg
+shell$ cd udmabuf-kmod-dpkg
 ```
 
 ### Cross Compile
