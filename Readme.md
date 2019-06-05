@@ -20,7 +20,7 @@ Build Debian Package
 ### Download repository
 
 ```console
-shell$ git clone --recursive --depth=1 -b v1.4.0 git://github.com/ikwzm/udmabuf-kmod-dpkg
+shell$ git clone --recursive --depth=1 -b v1.4.1 git://github.com/ikwzm/udmabuf-kmod-dpkg
 shell$ cd udmabuf-kmod-dpkg
 ```
 
@@ -41,8 +41,8 @@ shell$ sudo debian/rules arch=arm deb_arch=armhf kernel_release=4.14.34-armv7-fp
     :
     :
     :
-shell$ file ../udmabuf-4.14.34-armv7-fpga_1.4.0-1_armhf.deb
-../udmabuf-4.14.34-armv7-fpga_1.4.0-1_armhf.deb: Debian binary package (format 2.0)
+shell$ file ../udmabuf-4.14.34-armv7-fpga_1.4.1-1_armhf.deb
+../udmabuf-4.14.34-armv7-fpga_1.4.1-1_armhf.deb: Debian binary package (format 2.0)
 ```
 
 ### Self Compile
@@ -52,7 +52,7 @@ shell$ sudo debian/rules binary
     :
     :
     :
-shell$ file ../udmabuf-4.14.34-armv7-fpga_1.4.0-1_armhf.deb
-../udmabuf-4.14.34-armv7-fpga_1.4.0-1_armhf.deb: Debian binary package (format 2.0)
+shell$ file ../udmabuf-4.14.34-armv7-fpga_1.4.1-1_armhf.deb
+../udmabuf-4.14.34-armv7-fpga_1.4.1-1_armhf.deb: Debian binary package (format 2.0)
 ```
 
